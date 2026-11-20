@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seatwork 1</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        body {
+            font-family: 'Lexend', Arial, sans-serif;
+            background-color: #363643;
+            color: black;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: #211d41;
+            padding: 8px 16px;
+            text-align: center;
+            width: fit-content;
+            margin: 25px auto;
+            border-radius: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 14px;
+            display: inline-block;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .navbar a:hover {
+            background-color: #555555;
+        }
+
+        main {
+            color: white;
+            background-color: #24254e99;
+            font-size: 20px;
+            padding: 2.5em;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 1.25em;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1.75em;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 1.25em;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75em;
+            font-size: 0.95em;
+            border: 1.5px solid rgb(255, 250, 250);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.85em;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: white;
+            background-color: #b7950c;
+            border: 1.5px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 0.5em;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #output {
+            font-size: 1em;
+            text-align: center;
+            margin-top: 1.5em;
+        }
+
+        .picture {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 60px auto 0 auto;
+            border: 4px solid #333;
+        }
+    </style>
+
+    <script type="py" src="Dmain.py"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="SW1.html">Home Page</a>
+        <a href="ST.html">Element Checker</a>
+        <a href="DRILL1.html">Club Member Checker</a>
+        <a href="main.html">Creator</a>
+    </nav>
+
+    <main>
+        <h1>New Member System</h1>
+
+        <div class="form-group">
+            <label for="First_name">First Name</label>
+            <input type="text" id="First_name" placeholder="Ex: Andre">
+        </div>
+
+        <div class="form-group">
+            <label for="Last_name">Last Name</label>
+            <input type="text" id="Last_name" placeholder="Ex: Pagud">
+        </div>
+
+        <button py-click="show" id="new_member">New Member</button>
+
+        <h2 id="output"></h2>
+    </main>
+
+</body>
+</html>
